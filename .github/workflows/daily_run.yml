@@ -27,3 +27,9 @@ jobs:
           SENTIMENT_API_KEY: ${{ secrets.SENTIMENT_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python sentiment_tracker.py
+
+      - name: Upload the AI Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Daily-Business-Report
+          path: ai_business_report.txt
