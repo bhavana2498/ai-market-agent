@@ -1,0 +1,7 @@
+--- TSLA AI Market Analysis ---
+
+Here are three business action recommendations for a portfolio manager:
+
+*   **Do not equate high news article counts with bullish sentiment:** Initial price increases occurred with zero news, and subsequent periods of elevated news volume (26-44 articles) often coincided with significant price declines or consolidation.
+*   **Recognize news as an amplifier of existing market sentiment:** High news volume appears to amplify price movements in both directions. The largest single-day gain (3.44% on March 4th) also occurred on the day with the highest news article count (48), but only after a preceding multi-day decline with consistently high news.
+*   **Integrate qualitative news sentiment analysis:** Given that high news volume has correlated with both sharp corrections and significant recoveries, portfolio managers should prioritize real-time sentiment analysis of news content rather than relying solely on article quantity for directional cues on TSLA.

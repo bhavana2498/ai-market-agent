@@ -1,0 +1,29 @@
+name: Daily Market AI Agent
+
+on:
+  schedule:
+    # Runs at 12:00 PM UTC every Monday through Friday
+    - cron: '0 12 * * 1-5' 
+  workflow_dispatch: # Allows you to manually trigger it from the website
+
+jobs:
+  run-ai-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the Code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install Libraries
+        run: pip install -r requirements.txt
+          
+      - name: Run the AI Script
+        env:
+          FINANCE_API_KEY: ${{ secrets.FINANCE_API_KEY }}
+          SENTIMENT_API_KEY: ${{ secrets.SENTIMENT_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python sentiment_tracker.py
