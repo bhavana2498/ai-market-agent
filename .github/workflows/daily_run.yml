@@ -34,9 +34,8 @@ jobs:
           name: Daily-Business-Report
           path: ai_business_report.txt
 
-      - name: Send Report to Discord
-        uses: tsickert/discord-webhook@v7.0.0
-        with:
-          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content: "🚀 **Daily AI Quant Report is Ready!**"
-          filename: ai_business_report.txt
+      - name: Send Report to Discord (Native)
+        run: |
+          curl -F "payload_json={\"content\": \"🚀 **Daily AI Quant Report is Ready!**\"}" \
+               -F "file=@ai_business_report.txt" \
+               ${{ secrets.DISCORD_WEBHOOK }}
