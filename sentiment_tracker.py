@@ -64,16 +64,29 @@ def generate_ai_insights(csv_filename):
         data_string = df.to_string(index=False)
         
         # The Senior-Level Prompt
-        prompt = f"""
-        You are a Senior Financial Analyst. Review this recent market data for {TICKER}. 
-        It contains the date, stock close price, trading volume, and the number of news articles published that day.
-        
-        Data:
+        prompt = prompt = f"""
+        You are a Senior Quantitative Investment Advisor. Your goal is to provide a "Decision Support" report for a TSLA shareholder.
+
+        ### ANALYSIS FRAMEWORK:
+        1. **Sentiment/Volume Ratio**: If news volume is >30% above the 10-day average without a 2% price increase, it indicates "Noise."
+        2. **Price Action**: Analyze if price moves are "Supported" (high news volume) or "Speculative" (low news volume).
+
+        ### DATA FOR ANALYSIS:
         {data_string}
-        
-        Based on this data, provide a 3-bullet-point 'Business Action Recommendation' for a portfolio manager. 
-        Focus on the relationship between news volume and stock price movement. Keep it concise, professional, and do not use generic fluff.
-        """
+
+        ### REQUIRED OUTPUT FORMAT:
+        **CURRENT STANCE**: [HOLD, CAUTION, or WATCH]
+
+        **LOGICAL JUSTIFICATION**: 
+        - Explain the specific correlation found between the news volume and price volatility in the provided data.
+        - State whether the current price action is "Supported" by news volume.
+
+        **RISK THRESHOLDS**:
+        - Provide one "Upside Trigger" (Price point where the user should consider taking profit).
+        - Provide one "Downside Trigger" (Price point where the user should consider cutting losses).
+
+        **DISCLAIMER**: This is an AI-generated data analysis for educational purposes only and does not constitute financial advice.
+        """ 
         
         # Call the AI model
         response = client.models.generate_content(
