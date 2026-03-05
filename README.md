@@ -12,18 +12,20 @@ The AI is programmed with a custom quantitative framework:
 * **Risk Triggers:** Automates the calculation of Upside (Profit taking) and Downside (Loss cutting) price targets based on current volatility.
 
 ## 🛠️ Tech Stack & Architecture
-* **Language:** Python 3.x
+* **Language:** Python 3.10
 * **Data Orchestration:** Pandas (Time-series alignment & JSON transformation)
-* **AI Engine:** Google Gemini (via Generative AI SDK)
+* **AI Engine:** Google Gemini 2.5 Flash (via GenAI SDK)
 * **Data Sources:** Alpha Vantage (Market Data) & Finnhub (Sentiment News Volume)
 * **Cloud Infrastructure:** GitHub Actions (CI/CD) for automated daily execution
+* **Alerting & ChatOps:** Discord Webhooks for real-time push notifications
 * **Security:** GitHub Encrypted Secrets & Python-Dotenv for API key rotation
 
 ## ⚙️ How It Works
 1.  **Extract:** A Python script fetches the last 10 days of TSLA closing prices and daily news article counts.
 2.  **Transform:** Data is cleaned and merged into a structured DataFrame, removing indices to optimize AI token consumption.
 3.  **Analyze:** The data is processed through the "Quantitative Advisor" persona, which applies the decision matrix to generate a structured report.
-4.  **Automate:** A YAML workflow wakes up a GitHub virtual machine every morning to run the analysis and save the output as a downloadable artifact.
+4.  **Automate:** A YAML workflow wakes up a GitHub virtual machine every morning to run the analysis.
+5.  **Notify:** The final generated report is automatically pushed to a private Discord server via Webhooks, providing an instant daily alert.
 
 ## 📄 Sample AI Output
 > **CURRENT STANCE:** HOLD  
@@ -31,4 +33,4 @@ The AI is programmed with a custom quantitative framework:
 > **UPSIDE TRIGGER:** $420.00 | **DOWNSIDE TRIGGER:** $390.00
 
 ---
-*Disclaimer: This project is for educational purposes only. It is not financial advice.*
+*Disclaimer: This project is for portfolio and educational purposes only. It is not financial advice.*
