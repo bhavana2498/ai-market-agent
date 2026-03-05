@@ -31,4 +31,4 @@ The AI is programmed with a custom quantitative framework:
 > **UPSIDE TRIGGER:** $420.00 | **DOWNSIDE TRIGGER:** $390.00
 
 ---
-*Disclaimer: This project is for portfolio and educational purposes only. It is not financial advice.*
+*Disclaimer: This project is for educational purposes only. It is not financial advice.*
