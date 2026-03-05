@@ -35,7 +35,9 @@ jobs:
           path: ai_business_report.txt
 
       - name: Send Report to Discord (Native)
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
           curl -F "payload_json={\"content\": \"🚀 **Daily AI Quant Report is Ready!**\"}" \
                -F "file=@ai_business_report.txt" \
-               ${{ secrets.DISCORD_WEBHOOK }}
+               $DISCORD_WEBHOOK
