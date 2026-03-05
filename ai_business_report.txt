@@ -1,7 +1,18 @@
 --- TSLA AI Market Analysis ---
 
-Here are three business action recommendations for a portfolio manager:
+**CURRENT STANCE**: CAUTION
 
-*   **Do not equate high news article counts with bullish sentiment:** Initial price increases occurred with zero news, and subsequent periods of elevated news volume (26-44 articles) often coincided with significant price declines or consolidation.
-*   **Recognize news as an amplifier of existing market sentiment:** High news volume appears to amplify price movements in both directions. The largest single-day gain (3.44% on March 4th) also occurred on the day with the highest news article count (48), but only after a preceding multi-day decline with consistently high news.
-*   **Integrate qualitative news sentiment analysis:** Given that high news volume has correlated with both sharp corrections and significant recoveries, portfolio managers should prioritize real-time sentiment analysis of news content rather than relying solely on article quantity for directional cues on TSLA.
+**LOGICAL JUSTIFICATION**:
+The analysis of TSLA's recent performance reveals a stock highly reactive to news flow, resulting in significant volatility. The 10-day average news article count stands at 26.5.
+
+*   **Correlation between News Volume and Price Volatility**: There is a clear correlation between elevated news volume and significant price movements. For instance, the substantial 3.44% price increase on 2026-03-04 and the -2.70% drop on 2026-03-03 were both accompanied by news article counts (50 and 31 respectively) above the 10-day average, indicating market participants are actively responding to incoming information. However, this reactivity leads to considerable swings in both directions.
+
+*   **Noise Identification**: A notable instance of "Noise" was observed on 2026-03-02. Despite a high news article count of 44 (which is over 30% above the 10-day average of 26.5), the closing price only saw a marginal increase of 0.20% from the previous day, failing to meet the 2% threshold for a significant, non-noisy move. This suggests that high news volume does not always translate into directional price action, possibly due to conflicting information or a lack of impactful news.
+
+*   **Current Price Action**: The latest price action on 2026-03-04 is **Supported**. A strong 3.44% rally was accompanied by 50 news articles, demonstrating that this upward movement had underlying informational backing. However, this comes after a supported decline the previous day and a "noisy" day before that, highlighting the current environment of high volatility and mixed signals, even with news support.
+
+**RISK THRESHOLDS**:
+*   **Upside Trigger**: $425.00 (If TSLA reaches this price, consider taking partial or full profits, as it signifies breaking above recent highs with sustained momentum).
+*   **Downside Trigger**: $389.00 (If TSLA falls to or below this price, consider cutting losses, as it indicates a break below recent support levels and a potential for further downside).
+
+**DISCLAIMER**: This is an AI-generated data analysis for educational purposes only and does not constitute financial advice.
